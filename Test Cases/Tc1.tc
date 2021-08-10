@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Tc1</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>8ef7a33d-b205-4056-b4fb-f2829d5a4ec0</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>c05b9088-e0fa-4bda-b775-9d20e1f633dc</id>
+      <masked>false</masked>
+      <name>url</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>21221bf2-c724-430c-9356-1f7dbf9dcd28</id>
+      <masked>false</masked>
+      <name>username</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>60217986-08db-4879-a5d0-bf8372c7220e</id>
+      <masked>false</masked>
+      <name>password</name>
+   </variable>
+</TestCaseEntity>
