@@ -70,6 +70,6 @@ class loginStep {
 
 	@Then("User is nagatived to homepage")
 	def User_is_nagatived_to_homepage() {
-		println ("Nagatived to homepage")
+		println ("Nagatived to homepage222 fffffdddd")
 	}
 }
