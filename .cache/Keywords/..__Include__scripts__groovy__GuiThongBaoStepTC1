@@ -1,10 +1,10 @@
 {
-  "keywordFileContentHash": "FC6D9D426F7E638483934EED85CC28B7",
+  "keywordFileContentHash": "05A29F50E79EC7C1A612828A25235206",
   "keywordClasses": [
     {
       "name": "GuiThongBaoStepTC1",
       "keywordMethods": []
     }
   ],
-  "javadocParsed": true
+  "javadocParsed": false
 }

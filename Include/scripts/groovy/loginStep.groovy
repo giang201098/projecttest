@@ -69,6 +69,6 @@ class loginStep {
 
 
 	def User_is_nagatived_to_homepage() {
-		println ("Nagatived to homepage test Giang")
+		println ("Nagatived to homepage test")
 	}
 }
