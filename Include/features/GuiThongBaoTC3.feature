@@ -17,20 +17,14 @@
 ## (Comments)
 #Sample Feature Definition Template
 @tag
-Feature: Gui thong bao khi cpanel có setting nội dung va link quang cao
+Feature: Title of your feature
   I want to use this template for my feature file
 
   @tag1
-  Scenario Outline: Gui thong bao thanh cong cho shop dung ship
-    Given Co setting noi dung thong bao trong Cpanel
-    When Mo widget Giao hang
-    And Click vao icon chuong
-    And Click vao link quang cao
-    Then Click vao chuong mo ra thong bao
-    And Click vao link quang cao mo ra new tab link quang cao
-   
-    
-    
+  Scenario Outline: Title of your scenario outline
+    Given I want to write a step with <name>
+    When I check for the <value> in step
+    Then I verify the <status> in step
 
     Examples: 
       | name  | value | status  |

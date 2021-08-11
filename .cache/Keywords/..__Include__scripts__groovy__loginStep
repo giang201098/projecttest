@@ -1,5 +1,9 @@
 {
-  "keywordFileContentHash": "B1FAE240D27C444EDDA3B67AD08F90B0",
+<<<<<<< HEAD
+  "keywordFileContentHash": "1B2EFDD1AC67A387061595E66EFA7ECA",
+=======
+  "keywordFileContentHash": "5A0E6E1832D707CE1C8595132DF425DA",
+>>>>>>> branch 'main' of https://github.com/giang201098/projecttest.git
   "keywordClasses": [
     {
       "name": "loginStep",

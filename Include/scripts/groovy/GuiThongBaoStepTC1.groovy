@@ -100,9 +100,27 @@ class GuiThongBaoStepTC1 {
 
 		WebUI.click(findTestObject('Page_chi nhnh A - Bn hng/span_Giao hng'))
 	}
+	
+	@And("Click vao icon chuong")
+	def Click_vao_icon_chuong() {
+		
+	}
+	
+	@And("Click vao link quang cao")
+	def Click_vao_link_quang_cao() {
+		
+	}
+	
 
 	@Then("Click vao chuong mo ra thong bao")
 	def Click_vao_chuong_mo_ra_thong_bao() {
 		println ("ssss")
 	}
+	
+	@And("Click vao link quang cao mo ra new tab link quang cao")
+	def Click_vao_link_quang_cao_mo_ra_new_tab_link_quang_cao() {
+		
+	}
+	
+	
 }
