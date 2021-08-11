@@ -17,12 +17,12 @@
 ## (Comments)
 #Sample Feature Definition Template
 @tag
-Feature: Khong hien thị chuong khi cpanel chi setting link quang cao
+Feature: Khong hien thi chuong khi cpanel khong setting quang cao
   I want to use this template for my feature file
 
   @tag1
   Scenario Outline: Khong hien thi chuong o widget ban hang
-    Given Cpanel chi config link quang cao
+    Given Cpanel khong setting quang cao
     When Mo widget Giao hang
     Then Khong hien thi icon chuong
   

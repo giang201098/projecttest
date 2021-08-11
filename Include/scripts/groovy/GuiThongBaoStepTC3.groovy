@@ -43,12 +43,12 @@ import cucumber.api.java.en.When
 
 
 
-class GuiThongBaoStepTC1 {
+class GuiThongBaoStepTC3 {
 	/**
 	 * The step definitions below match with Katalon sample Gherkin steps
 	 */
-	@Given("Co setting noi dung thong bao trong Cpanel")
-	def Co_setting_noi_dung_thong_bao_trong_Cpanel() {
+	@Given("Cpanel chi config link quang cao")
+	def Cpanel_chi_config_link_quang_cao() {
 		WebUI.openBrowser(GlobalVariable.url)
 
 		WebUI.setText(findTestObject('Page_Kiotviet Giao Van/input_KiotViet_email'), GlobalVariable.username)
@@ -77,11 +77,11 @@ class GuiThongBaoStepTC1 {
 
 		WebUI.delay(3)
 
-		WebUI.setText(findTestObject('Page_Kiotviet Giao Van/input_Qung co trn menu widget_promotionWidgetcontent'), 'adv')
+		WebUI.setText(findTestObject('Page_Kiotviet Giao Van/input_Qung co trn menu widget_promotionWidgetcontent'), '')
 
 		WebUI.setText(findTestObject('Page_Kiotviet Giao Van/input_Qung co trn menu widget_promotionWidgeturl'), 'https://kiotviet.vn')
 
-		WebUI.setText(findTestObject('Page_Kiotviet Giao Van/input_Qung co trn menu widget_promotionWidgeturl_text'), 'adc')
+		WebUI.setText(findTestObject('Page_Kiotviet Giao Van/input_Qung co trn menu widget_promotionWidgeturl_text'), 'Xem chi tiet')
 
 		custom.clickUsingJS(findTestObject('Page_Kiotviet Giao Van/button_Cp nht'), 0)
 	}
@@ -101,24 +101,9 @@ class GuiThongBaoStepTC1 {
 		WebUI.click(findTestObject('Page_chi nhnh A - Bn hng/span_Giao hng'))
 	}
 
-	@And("Click vao icon chuong")
-	def Click_vao_icon_chuong() {
-		println ("ssss")
-	}
 
-	@And("Click vao link quang cao")
-	def Click_vao_link_quang_cao() {
-		println ("ssss")
-	}
-
-
-	@Then("Click vao chuong mo ra thong bao")
-	def Click_vao_chuong_mo_ra_thong_bao() {
-		println ("ssss")
-	}
-
-	@And("Click vao link quang cao mo ra new tab link quang cao")
-	def Click_vao_link_quang_cao_mo_ra_new_tab_link_quang_cao() {
+	@Then("Khong hien thi icon chuong")
+	def Khong_hien_thi_icon_chuong() {
 		println ("ssss")
 	}
 }
