@@ -42,33 +42,68 @@ import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
 
 
-class loginStep {
+
+class GuiThongBaoStepTC4 {
 	/**
 	 * The step definitions below match with Katalon sample Gherkin steps
 	 */
-	@Given("User nagatives to login page")
-	def User_nagatives_to_login_page() {
-		WebUI.openBrowser(null)
+	@Given("Cpanel khong setting quang cao")
+	def Cpanel_khong_setting_quang_cao() {
 		WebUI.openBrowser(GlobalVariable.url)
-	}
-
-	@When("User enters (.*) and (.*)")
-	def User_enters_username_and_password(String username, String password) {
 
 		WebUI.setText(findTestObject('Page_Kiotviet Giao Van/input_KiotViet_email'), GlobalVariable.username)
 
 		WebUI.setText(findTestObject('Page_Kiotviet Giao Van/input_KiotViet_password'), GlobalVariable.password)
-	}
 
-	@And("Click on login button")
-	def  Click_on_login_button(){
+		WebUI.delay(4)
+
 		def custom = new newpackage.newKeyword()
+
 		custom.clickUsingJS(findTestObject('Page_Kiotviet Giao Van/button_ng nhp'), 0)
+
+		WebUI.maximizeWindow()
+
+		WebUI.delay(3)
+
+		custom.clickUsingJS(findTestObject('Page_Kiotviet Giao Van/a_H thng'), 0)
+
+		WebUI.delay(3)
+
+		custom.clickUsingJS(findTestObject('Page_Kiotviet Giao Van/a_Ci t'), 0)
+
+		WebUI.delay(4)
+
+		custom.clickUsingJS(findTestObject('Page_Kiotviet Giao Van/a_Qung co trn widget'), 0)
+
+		WebUI.delay(3)
+
+		WebUI.setText(findTestObject('Page_Kiotviet Giao Van/input_Qung co trn menu widget_promotionWidgetcontent'), '')
+
+		WebUI.setText(findTestObject('Page_Kiotviet Giao Van/input_Qung co trn menu widget_promotionWidgeturl'), '')
+
+		WebUI.setText(findTestObject('Page_Kiotviet Giao Van/input_Qung co trn menu widget_promotionWidgeturl_text'), '')
+
+		custom.clickUsingJS(findTestObject('Page_Kiotviet Giao Van/button_Cp nht'), 0)
+	}
+
+	@When("Mo widget Giao hang")
+	def Mo_widget_Giao_hang() {
+		WebUI.navigateToUrl(GlobalVariable.url_KV)
+
+		WebUI.setText(findTestObject('Page_KiotViet/input_ng nhp_UserName'), GlobalVariable.username_KV)
+
+		WebUI.setText(findTestObject('Page_KiotViet/input_ng nhp_Password'), GlobalVariable.password_KV)
+
+		WebUI.click(findTestObject('Page_KiotViet/input_Qun mt khu_loginNewSaleOld'))
+
+		WebUI.delay(4)
+
+		WebUI.click(findTestObject('Page_chi nhnh A - Bn hng/span_Giao hng'))
 	}
 
 
-
-	def User_is_nagatived_to_homepage() {
-		println ("Nagatived to homepage test")
+	@Then("Khong hien thi icon chuong")
+	def Khong_hien_thi_icon_chuong() {
+		println ("ssss")
 	}
 }

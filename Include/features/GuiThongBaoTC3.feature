@@ -16,20 +16,20 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-
-
 @tag
-Feature: Login cpanel successfully
+Feature: Khong hien thị chuong khi cpanel chi setting link quang cao
   I want to use this template for my feature file
 
   @tag1
-  Scenario Outline: User can login cpanel if account exists in system
-    Given User nagatives to login page
-    When User enters <username> and <password> 
-    And  Click on login button
-    Then User is nagatived to homepage
+  Scenario Outline: Khong hien thi chuong o widget ban hang
+    Given Cpanel chi config link quang cao
+    When Mo widget Giao hang
+    Then Khong hien thi icon chuong
+  
+   
+    
 
     Examples: 
-      | username              | password |
-      | linh.lt@citigo.com.vn |     Test@123 | 
-      
+      | name  | value | status  |
+      | name1 |     5 | success |
+      | name2 |     7 | Fail    |
