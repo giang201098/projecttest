@@ -19,4 +19,19 @@
       <initValue>'123456'</initValue>
       <name>password</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://binhdt20.kvpos.com:59913/#/DashBoard'</initValue>
+      <name>url_KV</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'admin'</initValue>
+      <name>username_KV</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'123456'</initValue>
+      <name>password_KV</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

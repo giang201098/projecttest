@@ -81,18 +81,18 @@ class GuiThongBaoStepTC1 {
 
 		WebUI.setText(findTestObject('Page_Kiotviet Giao Van/input_Qung co trn menu widget_promotionWidgeturl'), 'https://kiotviet.vn')
 
-		WebUI.setText(findTestObject('Page_Kiotviet Giao Van/input_Qung co trn menu widget_promotionWidgeturl_text'), 'adc')
+		WebUI.setText(findTestObject('Page_KiotSviet Giao Van/input_Qung co trn menu widget_promotionWidgeturl_text'), 'adc')
 
 		custom.clickUsingJS(findTestObject('Page_Kiotviet Giao Van/button_Cp nht'), 0)
 	}
 
 	@When("Mo widget Giao hang")
 	def Mo_widget_Giao_hang() {
-		WebUI.navigateToUrl('https://binhdt20.kvpos.com:59913/#/DashBoard')
+		WebUI.navigateToUrl(GlobalVariable.url_KV)
 
-		WebUI.setText(findTestObject('Page_KiotViet/input_ng nhp_UserName'), 'admin')
+		WebUI.setText(findTestObject('Page_KiotViet/input_ng nhp_UserName'), GlobalVariable.username_KV)
 
-		WebUI.setText(findTestObject('Page_KiotViet/input_ng nhp_Password'), '123456')
+		WebUI.setText(findTestObject('Page_KiotViet/input_ng nhp_Password'), GlobalVariable.password_KV)
 
 		WebUI.click(findTestObject('Page_KiotViet/input_Qun mt khu_loginNewSaleOld'))
 
