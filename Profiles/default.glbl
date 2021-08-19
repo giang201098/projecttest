@@ -34,4 +34,14 @@
       <initValue>'123456'</initValue>
       <name>password_KV</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Sử dụng ngay dịch vụ mới của Giao hàng nhanh'</initValue>
+      <name>content</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://www.kiotviet.vn/'</initValue>
+      <name>url_quangcao</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

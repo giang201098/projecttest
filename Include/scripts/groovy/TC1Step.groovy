@@ -43,67 +43,97 @@ import cucumber.api.java.en.When
 
 
 
-class GuiThongBaoStepTC4 {
+class TC1Step {
 	/**
 	 * The step definitions below match with Katalon sample Gherkin steps
 	 */
-	@Given("Cpanel khong setting quang cao")
-	def Cpanel_khong_setting_quang_cao() {
+
+	def custom = new newpackage.newKeyword()
+
+	@Given("Cpanel co setting noi dung va link thong bao")
+	def Cpanel_co_setting_noi_dung_va_link_thong_bao() {
+
 		WebUI.openBrowser(GlobalVariable.url)
 
 		WebUI.setText(findTestObject('Page_Kiotviet Giao Van/input_KiotViet_email'), GlobalVariable.username)
 
 		WebUI.setText(findTestObject('Page_Kiotviet Giao Van/input_KiotViet_password'), GlobalVariable.password)
 
-		WebUI.delay(4)
-
-		def custom = new newpackage.newKeyword()
+		WebUI.delay(2)
 
 		custom.clickUsingJS(findTestObject('Page_Kiotviet Giao Van/button_ng nhp'), 0)
 
 		WebUI.maximizeWindow()
 
-		WebUI.delay(3)
+		WebUI.delay(2)
 
 		custom.clickUsingJS(findTestObject('Page_Kiotviet Giao Van/a_H thng'), 0)
 
-		WebUI.delay(3)
+		WebUI.delay(2)
 
 		custom.clickUsingJS(findTestObject('Page_Kiotviet Giao Van/a_Ci t'), 0)
 
-		WebUI.delay(4)
+		WebUI.delay(2)
 
 		custom.clickUsingJS(findTestObject('Page_Kiotviet Giao Van/a_Qung co trn widget'), 0)
 
-		WebUI.delay(3)
+		WebUI.delay(2)
 
-		WebUI.setText(findTestObject('Page_Kiotviet Giao Van/input_Qung co trn menu widget_promotionWidgetcontent'), '')
+		WebUI.setText(findTestObject('Page_Kiotviet Giao Van/input_Qung co trn menu widget_promotionWidgetcontent'), GlobalVariable.content)
 
-		WebUI.setText(findTestObject('Page_Kiotviet Giao Van/input_Qung co trn menu widget_promotionWidgeturl'), '')
+		WebUI.setText(findTestObject('Page_Kiotviet Giao Van/input_Qung co trn menu widget_promotionWidgeturl'), GlobalVariable.url_quangcao)
 
-		WebUI.setText(findTestObject('Page_Kiotviet Giao Van/input_Qung co trn menu widget_promotionWidgeturl_text'), '')
+		WebUI.setText(findTestObject('Page_Kiotviet Giao Van/input_Qung co trn menu widget_promotionWidgeturl_text'), 'Xem dịch vụ')
 
 		custom.clickUsingJS(findTestObject('Page_Kiotviet Giao Van/button_Cp nht'), 0)
 	}
 
-	@When("Mo widget Giao hang")
-	def Mo_widget_Giao_hang() {
-		WebUI.navigateToUrl(GlobalVariable.url_KV)
+	@When("Vao widget giao hang tren KV")
+	def Vao_widget_giao_hang_tren_KV() {
+
+		WebUI.openBrowser(GlobalVariable.url_KV)
 
 		WebUI.setText(findTestObject('Page_KiotViet/input_ng nhp_UserName'), GlobalVariable.username_KV)
 
 		WebUI.setText(findTestObject('Page_KiotViet/input_ng nhp_Password'), GlobalVariable.password_KV)
 
-		WebUI.click(findTestObject('Page_KiotViet/input_Qun mt khu_loginNewSaleOld'))
+		custom.clickUsingJS(findTestObject('Page_KiotViet/button_Bn hng'), 0)
 
-		WebUI.delay(4)
+		WebUI.delay(2)
 
-		WebUI.click(findTestObject('Page_chi nhnh A - Bn hng/span_Giao hng'))
+		custom.clickUsingJS(findTestObject('Page_chi nhnh - Bn hng/a_Bn thng'), 0)
+
+		WebUI.delay(2)
+
+		custom.clickUsingJS(findTestObject('Page_chi nhnh - Bn hng/a_Bn giao hng'), 0)
+
+		WebUI.delay(2)
 	}
 
+	@And("Click vao chuong")
+	def Click_vao_chuong() {
+		custom.clickUsingJS(findTestObject('Page_chi nhnh - Bn hng/i_Trong ngy_fas fa-bell'), 0)
+		WebUI.getText(findTestObject('Page_chi nhnh - Bn hng/p_S dng ngay dch v mi ca Giao hng nhanh'))
+		WebUI.delay(2)
+	}
 
-	@Then("Khong hien thi icon chuong")
-	def Khong_hien_thi_icon_chuong() {
-		println ("ssss")
+	@And("Click vao link trong thong bao")
+	def Click_vao_link_trong_thong_bao() {
+		custom.clickUsingJS(findTestObject('Page_chi nhnh - Bn hng/a_Xem dch v'), 0)
+	}
+
+	@Then("Kiem tra noi dung va link thong bao")
+	def Kiem_tra_noi_dung_va_link_thong_bao() {
+		if (WebUI.getText(findTestObject('Page_chi nhnh - Bn hng/p_S dng ngay dch v mi ca Giao hng nhanh')) != GlobalVariable.content) {
+			KeywordUtil.markErrorAndStop('Content not match')
+		}
+
+		WebUI.switchToWindowIndex(1)
+
+		WebUI.getUrl()
+
+		if (WebUI.getUrl() != GlobalVariable.url_quangcao) {
+			KeywordUtil.markErrorAndStop('Link not match')
+		}
 	}
 }

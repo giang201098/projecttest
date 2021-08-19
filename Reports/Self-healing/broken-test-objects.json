@@ -1,3 +1,14 @@
 {
-  "brokenTestObjects" : [ ]
+  "brokenTestObjects": [
+    {
+      "approved": true,
+      "testObjectId": "Object Repository/Page_chi nhnh - Bn hng/p_S dng ngay dch v mi ca Giao hng nhanh",
+      "brokenLocator": "//div[@id\u003d\u0027__bv_popover_10__\u0027]/div[2]/div/p",
+      "brokenLocatorMethod": "XPATH",
+      "proposedLocator": "p",
+      "proposedLocatorMethod": "CSS",
+      "recoveryMethod": "CSS",
+      "pathToScreenshot": "Reports/Self-healing/Object Repository/Page_chi nhnh - Bn hng/p_S dng ngay dch v mi ca Giao hng nhanh_CSS.png"
+    }
+  ]
 }

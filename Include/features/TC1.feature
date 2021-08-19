@@ -17,19 +17,18 @@
 ## (Comments)
 #Sample Feature Definition Template
 @tag
-Feature: Khong hien thị chuong khi cpanel chi setting link quang cao
+Feature: Cpanel có setting nội dung và link thông báo-> gửi thông báo thành công
   I want to use this template for my feature file
 
   @tag1
-  Scenario Outline: Khong hien thi chuong o widget ban hang
-    Given Cpanel chi config link quang cao
-    When Mo widget Giao hang
-    Then Khong hien thi icon chuong
-  
-   
-    
+  Scenario Outline: Title of your scenario outline
+    Given Cpanel co setting noi dung va link thong bao
+    When Vao widget giao hang tren KV
+    And Click vao chuong
+    And Click vao link trong thong bao 
+    Then Kiem tra noi dung va link thong bao
 
     Examples: 
       | name  | value | status  |
       | name1 |     5 | success |
-      | name2 |     7 | Fail    |
+ 

@@ -17,22 +17,15 @@
 ## (Comments)
 #Sample Feature Definition Template
 @tag
-Feature: Gui thong bao khi cpanel có setting nội dung va link quang cao
+Feature: Cpanel không setting thông báo -> Không hiển thị icon chuông trên cpanel
   I want to use this template for my feature file
 
   @tag1
-  Scenario Outline: Gui thong bao thanh cong cho shop dung ship
-    Given Co setting noi dung thong bao trong Cpanel
-    When Mo widget Giao hang
-    And Click vao icon chuong
-    And Click vao link quang cao
-    Then Click vao chuong mo ra thong bao
-    And Click vao link quang cao mo ra new tab link quang cao
-   
-    
-    
+  Scenario Outline: Title of your scenario outline
+    Given Cpanel khong setting thong bao
+    When Mo widget giao hang tren KV
+    Then Khong hien thi chuong
 
     Examples: 
       | name  | value | status  |
       | name1 |     5 | success |
-      | name2 |     7 | Fail    |
